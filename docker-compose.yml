@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: ankane/pgvector:latest
+    container_name: omnicart-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - omnicart-network
+    restart: always
+
+  redis:
+    image: redis:7-alpine
+    container_name: omnicart-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - omnicart-network
+    restart: always
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  omnicart-network:
+    driver: bridge

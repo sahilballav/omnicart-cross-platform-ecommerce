@@ -1,0 +1,48 @@
+# Gradle build files and caches
+.gradle/
+build/
+**/build/
+bin/
+out/
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.metadata
+.settings/
+.project
+.classpath
+.factorypath
+*.suo
+*.user
+*.userosscache
+*.sln
+*.docstate
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Flutter/Dart specific
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+.flutter-plugins
+.flutter-plugins-dependencies
+.dependency-info/
+/omnicart_frontend/android/key.properties
+/omnicart_frontend/ios/.symlinks/
+/omnicart_frontend/ios/Flutter/Flutter.framework
+/omnicart_frontend/ios/Flutter/Flutter.podspec
+/omnicart_frontend/ios/Flutter/Generated.xcconfig
+
+# Docker volumes and local env
+.env
+.env.*
+postgres_data/
+redis_data/
