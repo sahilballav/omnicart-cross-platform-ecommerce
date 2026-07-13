@@ -1,4 +1,6 @@
 rootProject.name = 'omnicart-backend'
 include 'api-gateway'
 include 'auth-service'
+include 'product-service'
+
 
